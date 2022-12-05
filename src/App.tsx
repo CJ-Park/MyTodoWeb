@@ -1,12 +1,17 @@
-import React from "react";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Login from './routes/login';
+import Join from './routes/join';
+import Main from './routes/todo';
 
 function App() {
   return (
-    <div>
-      <h1>
-        hihi
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />}/>
+        <Route path='/join' element={<Join />}/>
+        <Route path='/todo' element={<Main />}/>
+      </Routes>
+    </BrowserRouter>    
   );
 }
 

@@ -1,6 +1,7 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
+    "outDir": "build",
     "target": "ES6",
     "jsx": "react-jsx",
     "module": "ESNext",
@@ -12,6 +13,13 @@
       "ESNext"
     ],
     "allowJs": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
   },
   "include": [
     "./src/"
