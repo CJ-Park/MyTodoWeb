@@ -81,7 +81,7 @@ const Row = styled.div`
     border: 1px solid white;
   }
 `;
-// focus 일 때 border 컬러 바꾸기
+
 const IdRow = styled(Row)`
   border-radius: 6px 6px 0 0;
 `;
