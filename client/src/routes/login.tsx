@@ -15,7 +15,7 @@ const Login = (props: propType) => {
   const isLogin = cookies.get("loggedIn")
 
   useEffect(() => {
-    if(isLogin) {
+    if(isLogin === true) {
       navigate("/todo");
     }
   }, [])

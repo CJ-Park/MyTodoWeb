@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { Cookies, CookiesProvider } from 'react-cookie';
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState<Boolean>();
   const cookies = new Cookies();
   const isLogin = cookies.get("loggedIn")
   const loginStateHandler: Function = () => {
@@ -14,10 +14,10 @@ function App() {
   }
 
   useEffect(() => {
-    setLoggedIn(isLogin)
+    setLoggedIn(isLogin);
   }, []);
 
-  if(loggedIn) {
+  if(loggedIn && loggedIn !== undefined) {
     return (
       <BrowserRouter>
         <CookiesProvider>

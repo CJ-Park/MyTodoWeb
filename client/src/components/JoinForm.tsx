@@ -16,8 +16,8 @@ const JoinForm = () => {
             nickname: joinRef.current?.['nickname'].value,
             password: joinRef.current?.['password'].value
           })
-            navigate("/");
             alert("가입 완료");
+            navigate("/");
         } catch (err: any) {
           console.log(err);
           alert("회원 가입 실패");
