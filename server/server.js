@@ -30,6 +30,7 @@ app.use(
             httpOnly: true,
             maxAge: day*7,
             expires: new Date(Date.now() + day),
+            domain: process.env.CLIENT_URL,
         },
         
         store: MongoStore.create({mongoUrl: process.env.DB_URL}),
