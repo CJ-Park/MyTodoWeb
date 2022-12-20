@@ -12,7 +12,7 @@ const app = express();
 
 const day = 86400000;
 let corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: process.env.CLIENT_URL,
     credentials: true,
 }
 
@@ -30,7 +30,6 @@ app.use(
             httpOnly: true,
             maxAge: day*7,
             expires: new Date(Date.now() + day),
-            sameSite: 'lax'
         },
         
         store: MongoStore.create({mongoUrl: process.env.DB_URL}),
