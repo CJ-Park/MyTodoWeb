@@ -53,7 +53,8 @@
   },
   "react-dotenv": {
     "whitelist": [
-      "REACT_APP_API_KEY"
+      "REACT_APP_API_KEY",
+      "REACT_APP_SERVER_URL"
     ]
   }
 }

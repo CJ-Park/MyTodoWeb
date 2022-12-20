@@ -1,3 +1,4 @@
+import env from "ts-react-dotenv";
 import axios from "axios";
 
 type Login = {
@@ -10,28 +11,31 @@ type Join = {
     password: string
 }
 
+const SERVER = env.REACT_APP_SERVER_URL;
+console.log(SERVER);
+
 axios.defaults.withCredentials = true;
 
 export const Api = {
     login: async (data: Login) => {
-        return await axios.post('http://localhost:4000/api/login', data);
+        return await axios.post(`${SERVER}/api/login`, data);
     },
     join: async (data: Join) => {
-        return await axios.post('http://localhost:4000/api/join', data);
+        return await axios.post(`${SERVER}/api/join`, data);
     },
     getTodos: async () => {
-        return await axios.get('http://localhost:4000/todos');
+        return await axios.get(`${SERVER}/todos`);
     },
     getNickname: async () => {
-        return await axios.get('http://localhost:4000/api/nickname');
+        return await axios.get(`${SERVER}/api/nickname`);
     },
     postTodos: async (content: string) => {
-        await axios.post('http://localhost:4000/todos', {content});
+        await axios.post(`${SERVER}/todos`, {content});
     },
     removeTodo: async (idx: number) => {
-        await axios.delete(`http://localhost:4000/user/todos/${idx}`);
+        await axios.delete(`${SERVER}/user/todos/${idx}`);
     },
     checkTodo: async (idx: number) => {
-        await axios.put(`http://localhost:4000/user/todos/${idx}`);
+        await axios.put(`${SERVER}/user/todos/${idx}`);
     }
 }
