@@ -1,3 +1,4 @@
+// 전역 디자인 설정을 위함 => css 초기화 및 백그라운드 색상 설정
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

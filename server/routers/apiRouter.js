@@ -1,3 +1,4 @@
+// "/api"로 라우팅되는 api들 요청에 따라 해당 controller 실행
 import express from "express";
 import { postJoin, postLogin } from "../controllers/userController.js"
 import { getNicknameBySession } from "../controllers/todoController.js";

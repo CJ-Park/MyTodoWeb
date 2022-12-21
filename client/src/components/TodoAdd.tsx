@@ -1,3 +1,4 @@
+// Todo Add => todo 입력하는 input과 api 호출하는 버튼으로 구성됨
 import React, { useState } from "react";
 import styled from "styled-components";
 
@@ -7,9 +8,13 @@ type submitProps = {
 
 const TodoAdd = ({onSubmit}: submitProps) => {
   const [content, setContent] = useState('');
+  
+  // Todo 입력값 변수에 저장
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
   };
+
+  // 버튼 클릭시 input 비우면서 상위 컴포넌트의 onSubmit 호출
   const handleClick = (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     onSubmit(content);

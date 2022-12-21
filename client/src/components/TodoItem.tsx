@@ -1,3 +1,5 @@
+// Todo List에 출력될 item 컴포넌트
+// todo, id, 삭제버튼, 체크버튼으로 구성됨
 import styled from "styled-components";
 import {BiSquare, BiCheckSquare, BiTrash} from "react-icons/bi";
 import { todoType } from "../routes/todo";
@@ -10,9 +12,12 @@ type todoProps = {
 }
 
 const TodoItem = ({todo, id, onRemove, onCheck}: todoProps) => {
+    // 체크버튼 클릭시 상위 컴포넌트의 onCheck함수에 id 값 담아서 실행
     const handleCheck = (id: number) => {
       onCheck(id);
     }
+
+    // 삭제버튼 클릭시 상위 컴포넌트의 onRemove함수에 id 값 담아서 실행
     const handleDelete = (id: number) => {
       onRemove(id);
     }

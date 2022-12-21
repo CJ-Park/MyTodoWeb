@@ -1,3 +1,5 @@
+// Title 컴포넌트 
+// 변수로 title과 fontSize를 받아서 유동적으로 설정되게 함
 import styled from "styled-components";
 
 type TitleProps = {

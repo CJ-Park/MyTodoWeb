@@ -1,3 +1,5 @@
+// TodoList 컴포넌트
+// TodoItem의 배열로 이루어짐
 import styled from "styled-components";
 import { todoType } from "../routes/todo";
 import TodoItem from "./TodoItem";
@@ -8,6 +10,8 @@ type listProps = {
     onCheck: Function,
 }
 
+// todos 배열을 map으로 순회하며 출력
+// key값으로 MongoDB에 저장된 id값을 저장
 const TodoList = ({todos, onRemove, onCheck}: listProps) => {
     return (
         <Container>

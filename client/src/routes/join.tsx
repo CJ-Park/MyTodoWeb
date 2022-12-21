@@ -1,3 +1,5 @@
+// "/join" 일 때 보여질 화면
+// TodoTitle 컴포넌트와 Content 내의 회원가입 폼으로 구성됨
 import styled from "styled-components";
 import JoinForm from "../components/JoinForm";
 import TodoTitle from "../components/Title";

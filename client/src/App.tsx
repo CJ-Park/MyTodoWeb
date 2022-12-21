@@ -1,3 +1,6 @@
+// 최상위 파일 App 
+// login 여부를 loggedIn 변수를 생성해서 판단
+// login 상태면 로그인창과 회원가입창은 가지 못하도록 설계
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Login from './routes/login';
 import Join from './routes/join';
@@ -17,6 +20,7 @@ function App() {
     setLoggedIn(isLogin);
   }, []);
 
+  // 로그인 상태라면 "/todo"로만 Route 될 수 있도록 설계함
   if(loggedIn && loggedIn !== undefined) {
     return (
       <BrowserRouter>

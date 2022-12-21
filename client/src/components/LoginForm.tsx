@@ -1,3 +1,6 @@
+// 로그인 폼 컴포넌트
+// 회원가입과 마찬가지로 useRef를 사용해 각 input의 내용 가져옴
+// 로그인 버튼 클릭시 loginHandler 실행 => login api 호출 후 "/todo"로 리다이렉트
 import React, { useRef } from "react";
 import { AiOutlineLock, AiOutlineUser } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +15,7 @@ const LoginForm = ({login}: loginType) => {
     const navigate = useNavigate();
     const loginRef = useRef<HTMLFormElement>(null);
 
+    // 로그인 버튼 클릭시(로그인 폼 Submit) 작동되는 함수
     const loginHandler = async (e: React.FormEvent) => {
       e.preventDefault();
 

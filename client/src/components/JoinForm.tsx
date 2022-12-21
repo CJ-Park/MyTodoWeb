@@ -1,3 +1,6 @@
+// 회원가입 폼 컴포넌트
+// useRef를 사용해서 각 input의 내용을 가져옴
+// 회원가입 클릭시 joinHandler 실행 => join api 실행 후 로그인창으로 redirect
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -7,6 +10,7 @@ const JoinForm = () => {
     const navigate = useNavigate();
     const joinRef = useRef<HTMLFormElement>(null);
 
+    // 회원가입 버튼 클릭시(회원가입 폼 Submit) 작동하는 함수
     const joinHandler = async (e: React.FormEvent) => {
         e.preventDefault();
     
