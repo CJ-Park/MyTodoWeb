@@ -27,10 +27,11 @@ app.use(
         resave: false,
         saveUninitialized: false,
         cookie: {
-            httpOnly: true,
+            secure: true,
             maxAge: day*7,
             expires: new Date(Date.now() + day),
             domain: process.env.CLIENT_URL,
+            sameSite: 'none',
         },
         
         store: MongoStore.create({mongoUrl: process.env.DB_URL}),

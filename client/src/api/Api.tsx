@@ -12,7 +12,6 @@ type Join = {
 }
 
 const SERVER = env.REACT_APP_SERVER_URL;
-console.log(SERVER);
 
 axios.defaults.withCredentials = true;
 
